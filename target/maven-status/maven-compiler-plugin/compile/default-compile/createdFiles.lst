@@ -1,5 +1,5 @@
+com\java\silentneighbor\SilentneighborApplication.class
 com\java\silentneighbor\controller\SilentNeighborController.class
 com\java\silentneighbor\service\AddPaymentService.class
 com\java\silentneighbor\model\AddPaymentRequest.class
 com\java\silentneighbor\database\AddPaymentRepository.class
-com\java\silentneighbor\SilentneighborApplication.class

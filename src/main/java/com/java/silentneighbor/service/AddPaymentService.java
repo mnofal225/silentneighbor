@@ -1,12 +1,25 @@
 package com.java.silentneighbor.service;
 
+import com.java.silentneighbor.database.document.PaymentHistory;
+import com.java.silentneighbor.database.PaymentHistoryRepository;
 import com.java.silentneighbor.model.AddPaymentRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
 
+import java.util.List;
+
 @Service
 public class AddPaymentService {
+
+    @Autowired
+    private PaymentHistoryRepository paymentHistoryRepository;
+
+    public List<PaymentHistory> allPayments() {
+
+        return paymentHistoryRepository.findAll();
+    }
 
     public String addPayment(AddPaymentRequest addPaymentRequest) {
         validateEmail(addPaymentRequest.getEmail());
